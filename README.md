@@ -44,4 +44,47 @@ Abaixo estão as entidades esperadas para o sistema:
         * E-mail
         * Lançamentos
 
+## Deploy no Heroku
+
+Para testar a aplicação utilizando o Postman, foi realizado o deploy no Heroku. 
+
+### Testes:
+
+#### Cadastro de Usuário (POST)
+
+URL:
+https://financas-pessoais.herokuapp.com/api/user
+
+Corpo da requisição: 
+{
+	"name":"João Silva",
+	"email":"joao@gmail.com"
+}
+
+#### Lista todos usuários (GET)
+
+URL:
+https://financas-pessoais.herokuapp.com/api/user/listall
+
+#### Cadastra Lançamento (POST)
+
+URL:
+https://financas-pessoais.herokuapp.com/api/lancamento
+
+Corpo da requisição: 
+{
+	"user":"1",
+	"description":"Salário",
+	"type":"INCOME",
+	"value":"6000",
+	"day":"15",
+	"month":"3",
+	"year":"2019"
+}
+
+#### Listar lançamentos (GET)
+
+https://financas-pessoais.herokuapp.com/api/lancamento/listar
+
+Para consultar todo mapeamento e suas funções consulte os arquivos dentro de ./api/resource
 
